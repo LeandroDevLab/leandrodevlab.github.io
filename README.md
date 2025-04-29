@@ -21,10 +21,6 @@ Recorrer aos pilares e sistemas de orientação da Arquitetura de Informação:
 🖼 Exibição de projetos, formação e experiência, formas de contato etc.;
 🛠 Definir seções: Home, Projetos, Sobre, Contato.
 
-#### Dicas
-Pontos de respiro no site, se tudo está em destaque, nada tem importância de fato. Chamar atenção somente para o que é importante.
-Na Dívida vá pelo mais simples
-Mockups nas apresentações dos projetos
 
 ### Sites de Referências:
 
