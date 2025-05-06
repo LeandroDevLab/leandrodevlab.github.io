@@ -1,5 +1,5 @@
 const toggleTheme = document.getElementById('toggleTheme');
-const rootHtml = document.documentElement
+const rootHtml = document.documentElement // assistir os documentos da página como um todo
 
 function changeTheme () {
     const currentTheme = rootHtml.getAttribute('data-theme');
