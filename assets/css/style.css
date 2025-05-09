@@ -24,7 +24,7 @@
     --primary-bg-color: #e9e9e9;
     --secondary-bg-color: #c7c8c9;
     --primary-border-color: #c7c8c9;
-    --secondary-border-color: #c7c8c9;
+    --secondary-border-color: #9a9a9c;
 
     --title-color: #0b0b0f;
     --text-color: #28292e;
@@ -81,6 +81,11 @@ body.light {
     filter: invert(1); /* filtro para inverter a cor 
 } */
 
+/* Inverte as cores com filtro nas logos */
+html[data-theme='light'] .habilidades__logo {
+    filter: invert(80%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -118,6 +123,12 @@ i{
 h1 {
     font-size: 2.5rem;
     font-weight: 200;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 h1, h2, h3 {
@@ -174,6 +185,8 @@ p {
     bottom: 0; /* para que ele fique no final */
     justify-content: space-between;
     border: 1px solid var(--primary-border-color);
+    background-color: var(--primary-bg-color);
+    z-index: 2;
 }
 
 .menu--mobile .menu__link {
@@ -229,9 +242,11 @@ p {
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
+    border: none;
     padding: .875rem 1.5rem;
     transition: .3s ease-in-out;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
 .btn:hover {
@@ -251,11 +266,14 @@ p {
     color: var(--primary-color);
 }
 
+main, .projects {
+    padding: 2.5rem 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem 1rem;
 }
 
 .main__content1 {
@@ -275,7 +293,7 @@ main {
     justify-content: flex-start;
     align-items: center;
     gap: 1.25rem;
-    padding: 6.25rem 1rem 2rem 1rem;
+    padding: 6.25rem 1rem 2rem;
     background: var(--secondary-bg-color);
     margin-top: -5.5rem;
 }
@@ -288,7 +306,6 @@ main {
 .habilidades__list {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     gap: .5rem;
 }
 
@@ -307,6 +324,86 @@ main {
 .habilidades__logo {
     height: 2.4rem;
     aspect-ratio: 1/1;
+}
+
+/* SEÇÃO DE PROJETOS */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.projects__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projects__card .card__cover{
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: contain;
+    object-position: center;
+    aspect-ratio: 16/12;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card_title {
+    font-size: 1.5rem;
+}
+
+.card__description {
+    font-size: 1rem;
+    color: var(--title-color);
+}
+
+.card__list {
+    margin-left: 1rem;
+}
+
+.card__item {
+    list-style: disc;
+}
+
+.card__buttons {
+    display: flex;
+
+}
+
+.about__content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about__content1 img {
+    width: 100%;
+    border-radius: 50%;
+    align-items: center;
+    padding: 2rem;
+}
+
+.about__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.3;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.description__buttons {
+    display: flex;
+    flex-direction: row;
 }
 
 footer p {
@@ -341,7 +438,12 @@ footer p {
         font-size: 4rem;
     }
 
-    main {
+    h2 {
+        font-size: 3rem;
+        letter-spacing: .4rem;
+    }
+
+    main, .projects {
         padding: 8rem 6rem 4rem 6rem;
     }
 
@@ -359,6 +461,55 @@ footer p {
     footer {
         margin: 0;
     }
+    .about__content1 {
+        padding: 6.25rem 6rem 2rem 6rem;
+    }
+
+    .about__content1 img {
+        padding: 0;
+        width: 60%;
+    }
+
+    .about__description {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .projects__card {
+        flex-direction: row;
+    }
+
+    .projects__card.card--reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .projects__card .card__cover {
+        width: 40%;
+        object-fit: cover;
+        /* aspect-ratio: 16/9; */
+    }
+
+    .about__content1 {
+        flex-direction: row;
+    }
+
+    .about__description h2 {
+        text-align: left;
+    }
+
+    .about__content1 img {
+        width: 45%;
+    }
+
+    .about__content1, .about__content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -372,6 +523,11 @@ footer p {
 
     h1 {
         font-size: 5.25rem;
+    }
+
+    h2 {
+        font-size: 4.25rem;
+        letter-spacing: .4rem;
     }
 
     p {
@@ -403,11 +559,41 @@ footer p {
         aspect-ratio: 1/1;
     }
 
+    .card__title {
+        font-size: 3.25rem;
+    }
+
+    .card__description, .card__item {
+        font-size: 1.25rem;
+    }
+
+    .card__buttons .btn {
+        width: auto;
+    }
+
+    .card__body .habilidades__item {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .card__body .habilidades__logo {
+        height: 2rem;
+    }
+
+    .about__content1, .projects {
+        padding: 10rem 6rem 4rem;
+    }
+
 }
 
 @media (min-width: 1400px) {
     h1 {
         font-size: 6.25rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+        letter-spacing: .4rem;
     }
 
     main {
@@ -420,5 +606,9 @@ footer p {
 
     .habilidades {
         padding: 10rem 15rem 4rem;
+    }
+
+    .about__content1, .projects {
+        padding: 12rem 15rem 2rem;
     }
 }
