@@ -12,9 +12,9 @@
     <!-- My Styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
     </head>
-<body class="dark">
+<body id="home" class="dark">
     <header class="header">
-        <nav class="header__nav">
+        <nav id="menu__desktop" class="header__nav">
             <ul class="menu menu--principal">
                 <li class="menu__item">
                     <a class="menu__link active" href="#home">
@@ -48,7 +48,7 @@
     <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
-                <a class="menu__link active" href="#home">
+                <a class="menu__link" href="#home">
                     <i class="menu__icon bi bi-house-door"></i>
                     <span class="menu__text">Home</span>
                 </a>
@@ -74,7 +74,7 @@
         </ul>
     </nav>
     <main>
-        <div id="home" class="main__content1">
+        <div class="main__content1">
             <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
             <p>Leandro Ribeiro, Esperança-PB, Desenvolvedor Front-end.</p>
             <ul class="menu menu--social">
@@ -316,13 +316,17 @@
                         </li>
                     </ul>
                     <div class="card__buttons">
-                        <button class="btn btn--primary">
-                            <span>Prévia</span>
-                            <i class="bi bi-arrow-up-right"></i>
-                        </button>
-                        <button class="btn">
-                            <span>Repositório</span>
-                        </button>
+                        <a href="https://leandrodevlab.github.io/simulador-piano/" target="_blank">
+                            <button class="btn btn--primary">
+                                <span>Prévia</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                        </a>
+                        <a href="https://github.com/LeandroDevLab/simulador-piano" target="_blank">
+                            <button class="btn">
+                                <span>Repositório</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -357,13 +361,17 @@
                         </li>
                     </ul>
                     <div class="card__buttons">
-                        <button class="btn btn--primary">
-                            <span>Prévia</span>
-                            <i class="bi bi-arrow-up-right"></i>
-                        </button>
-                        <button class="btn">
-                            <span>Repositório</span>
-                        </button>
+                        <a href="https://leandrodevlab.github.io/js-yugioh-assets/" target="_blank">
+                            <button class="btn btn--primary">
+                                <span>Prévia</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                        </a>
+                        <a href="https://github.com/LeandroDevLab/js-yugioh-assets" target="_blank">
+                            <button class="btn">
+                                <span>Repositório</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -387,13 +395,13 @@
                     <span>Inglês: Básico | Espanhol: Básico</span>
                 </div>
                 <div class="description__buttons">
-                    <a href="" target="_blank">
+                    <a href="mailto:leandrodevlab@gmail.com?subject=Contato&body=Olá, gostaria de falar com você.">
                         <button class="btn btn--primary">
                             <span>Conecte-se Comigo</span>
                             <i class="bi bi-arrow-up-right"></i>
                         </button>
                     </a>
-                    <a href="">
+                    <a href="http://lattes.cnpq.br/3580465755259608" target="_blank">
                         <button class="btn">
                             <span>Currículo</span>
                         </button>
@@ -405,11 +413,11 @@
             <div class="col1">
                 <div class="row1">
                     <h3>Formação</h3>
-                    <h4>Desenvolvimento de Software com Metodologia Ágil</h4>
-                    <span>Abr 2023 - Atualmente</span>
+                    <h4>Bacharelado em Ciência da Computação</h4>
+                    <span>Fev. 2025 - Atualmente</span>
                     <div class="about__icons">
                         <i class="bi bi-bank"></i>
-                        <span>Universidade Salvador</span>
+                        <span>Gran Faculdade</span>
                     </div>
                     <div class="about__icons">
                         <i class="bi bi-mortarboard"></i>
@@ -435,46 +443,47 @@
                 <div id="accordion">
                     <div class="accordion__item active">
                         <button class="accordion__header start">
-                            <span>Versionamento de Código com Git e GitHub</span>
-                            <i class="bi bi-caret-down-fill"></i>
+                            <span>Ri Happy - Front-end do Zero</span>
+                            <i class="bi bi-chevron-down"></i>
                         </button>
                         <div class="accordion__body">
                             <p>
-                            Digital Innovation One. Fev 2023. 2h.
+                            Digital Innovation One. Fev 2025. 75h.
                             </p>
                             <p>
-                            O que é versionamento de código, Git e GitHub. Como instalar e configurar o Git em diferentes sistemas 
-                            operacionais e como autenticar via Token e SSH. Como manusear repositórios, indo desde a criação e clonagem 
-                            até o gerenciamento de branches, passando por todas as etapas de salvar, desfazer e sincronizar alterações 
-                            com o repositório remoto. 
+                            Princípio de Desenvolvimento de Software Colaborativo; Desenvolvimento de Páginas com HTML e CSS; Lógica de progração; Liguagem de progração JavaScript; Construção de Landing Pages; Manipulação de dados com API. 
                             </p>
                         </div>
                     </div>
                     <div class="accordion__item">
                         <button class="accordion__header">
-                            <span>Contribuindo em um Projeto Open Source no GitHub</span>
-                            <i class="bi bi-caret-down-fill"></i>
+                            <span>JavaScript Básico - Para iniciantes</span>
+                            <i class="bi bi-chevron-down"></i>
                         </button>
                         <div class="accordion__body">
                             <p>
-                            Digital Innovation One. Fev 2023. 1h.
+                                Udemy - Criador: Luiz Otávio Miranda e Tales Calogi Malaquias. Mar 2025. 7h39min.
                             </p>
                             <p>
-                            Lab prático sobre colaboração em projetos de código aberto.
+                                Manipulação de variáveis; Objeto Math; Arrays; Function; Objetos.
                             </p>
                         </div>
                     </div>
                     <div class="accordion__item">
                     <button class="accordion__header end">
-                        <span>Organizando seus Estudos com os Roadmaps DIO e o Notion</span>
-                        <i class="bi bi-caret-down-fill"></i>
+                        <span>JavaScript - Lógica de programação</span>
+                        <i class="bi bi-chevron-down"></i>
                     </button>
                         <div class="accordion__body end">
                             <p>
-                            Digital Innovation One. Fev 2023. 2h.
+                                Udemy - Criador: Luiz Otávio Miranda e Tales Calogi Malaquias. Mar 2025. 9h08min.
                             </p>
                             <p>
-                            Otimização dos estudos com os Roadmaps DIO, construindo um caderno de estudos com a ferramenta Notion.
+                                Sobre lógica; Extensões que utilizo no VSCode; Operadores de comparação; Operadores Lógicos; Avaliação de Curto-Circuito (Short-Circuit);
+                                if, else if e else; Modelo HTML e CSS; Operação ternária; Objeto Date; Switch/Case; Exercício com switch e date; Mais diferenças entre var e let/const;
+                                Atribuição via desestruturação (Objetos); For - Clássico - Estrutura de repetição; DOM e a árvore do DOM; For in - Estrutura de repetição;
+                                For of - Estrutura de repetição; Exercícios com NodeList (Browser); While e Do While - Estrutura de repetição;
+                                Break e Continue; Tratando e lançando erros (try, catch, throw); Tratando e lançando erros (try, catch, finally); setInterval e setTimeout.
                             </p>
                         </div>
                     </div>
@@ -489,27 +498,27 @@
         </p>
         <ul class="menu menu--social">
             <li>
-                <a class="menu__link" href="https://github.com/elidianaandrade" target="_blank">
+                <a class="menu__link" href="https://github.com/LeandroDevLab" target="_blank">
                 <i class="menu__icon bi bi-github"></i>
                 <span>GitHub</span>
                 </a>
             </li>
             <li>
-                <a class="menu__link" href="https://www.linkedin.com/in/elidianaandrade/" target="_blank">
+                <a class="menu__link" href="https://linkedin.com/in/leandro-oliota" target="_blank">
                 <i class="menu__icon bi bi-linkedin"></i>
                 <span>LinkedIn</span>
                 </a>
             </li>
             <li>
-                <a class="menu__link" href="" target="_blank">
+                <a class="menu__link" href="https://www.instagram.com/leandrooliota" target="_blank">
                 <i class="menu__icon bi bi-instagram"></i>
                 <span>Instagram</span>
                 </a>
             </li>
         </ul>
-        <a href="mailto:elidianaandrade@outlook.com">
+        <a href="mailto:leandrodevlab@gmail.com?subject=Contato&body=Olá, gostaria de falar com você.">
             <button class="btn btn--primary">
-                <span class="email">elidianaandrade@outlook.com</span>
+                <span class="email">leandrodevlab@gmail.com</span>
             </button>  
         </a>
     </section>

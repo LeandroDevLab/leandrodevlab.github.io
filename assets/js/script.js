@@ -16,6 +16,26 @@ function changeTheme () {
 
 toggleTheme.addEventListener('click', changeTheme)
 
+const accordionHeaders = document.querySelectorAll('.accordion__header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const accordionItem = header.parentElement; //pegando o pai do meu elemento accordion__header, que é o accordion__item
+        const accordionActive = accordionItem.classList.contains('active'); //saber se no elemento pai tem a class active
+
+        accordionActive ? accordionItem.classList.remove('active') : accordionItem.classList.add('active');
+    })
+})
+
+const menuLinks = document.querySelectorAll(".menu__link");
+
+menuLinks.forEach(item => {
+    item.addEventListener('click', () => {
+        menuLinks.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    })
+})
+
 
 /* 
 Dei pausa: como eu fiz
