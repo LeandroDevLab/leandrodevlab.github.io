@@ -3,11 +3,6 @@
 
 const cursosJSON = [
     {
-        "titleCourse": "Ri Happy - Front-end do Zero",
-        "localDate": "Digital Innovation One. Fev 2025. 75h.",
-        "information": "Princípio de Desenvolvimento de Software Colaborativo; Desenvolvimento de Páginas com HTML e CSS; Lógica de progração; Liguagem de progração JavaScript; Construção de Landing Pages; Manipulação de dados com API. "
-    },
-    {
         "titleCourse": "JavaScript Básico - Para iniciantes",
         "localDate": "Udemy - Criador: Luiz Otávio Miranda e Tales Calogi Malaquias. Mar 2025. 7h39min.",
         "information": "Manipulação de variáveis; Objeto Math; Arrays; Function; Objetos."
