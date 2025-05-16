@@ -150,6 +150,7 @@ p {
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
+    z-index: 2;
 }
 
 .header__toggle {
@@ -282,7 +283,13 @@ main {
     gap: 1.5rem;
 }
 
-.main__content2 iframe {
+.main__content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__content2 img {
     width: 100%;
     aspect-ratio: 16/9; /* adiciona uma dimensão de tanto/tanto, tomando nesse caso a base de 100% da largura */
 }
@@ -612,6 +619,10 @@ footer p {
         padding: 6.25rem 6rem 2rem 6rem;
     }
 
+    .about__content2{
+        padding: 2.25rem 6rem 2rem;
+    }
+
     .about__content1 img {
         padding: 0;
         width: 60%;
@@ -624,6 +635,10 @@ footer p {
     .contact {
         padding: 5rem 10rem;
         gap: 1.5rem;
+    }
+
+    .main__content2 img {
+        margin-top: -3rem;
     }
 }
 
@@ -673,6 +688,10 @@ footer p {
 
     .col1 h3, .col2 h3 {
         font-size: 2rem;
+    }
+
+    .main__content2 img {
+        margin-top: -4rem;
     }
 }
 
@@ -759,6 +778,10 @@ footer p {
     .contact {
         padding: 6rem 14rem;
         gap: 2rem;
+    }
+
+    .main__content2 img {
+        margin-top: -5rem;
     }
 }
 
