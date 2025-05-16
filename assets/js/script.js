@@ -36,6 +36,25 @@ menuLinks.forEach(item => {
     })
 })
 
+/* Salvando no localStorage a opção de theme escolhida pelo usuário */
+document.addEventListener('DOMContentLoaded', () => {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+
+  // Aplica o tema salvo (ou mantém o padrão)
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  }
+
+  document.getElementById('toggle-theme').addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+});
+
 
 /* 
 Dei pausa: como eu fiz
