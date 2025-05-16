@@ -1,3 +1,49 @@
+/* Simulando pegar informações de uma JSON */
+/* Foi adicionado em cima para que os códigos e funções abaixo pudessem ler o document após ser criado primeiro */
+
+const cursosJSON = [
+    {
+        "titleCourse": "Ri Happy - Front-end do Zero",
+        "localDate": "Digital Innovation One. Fev 2025. 75h.",
+        "information": "Princípio de Desenvolvimento de Software Colaborativo; Desenvolvimento de Páginas com HTML e CSS; Lógica de progração; Liguagem de progração JavaScript; Construção de Landing Pages; Manipulação de dados com API. "
+    },
+    {
+        "titleCourse": "JavaScript Básico - Para iniciantes",
+        "localDate": "Udemy - Criador: Luiz Otávio Miranda e Tales Calogi Malaquias. Mar 2025. 7h39min.",
+        "information": "Manipulação de variáveis; Objeto Math; Arrays; Function; Objetos."
+    },
+    {
+        "titleCourse": "JavaScript - Lógica de programação",
+        "localDate": "Udemy - Criador: Luiz Otávio Miranda e Tales Calogi Malaquias. Mar 2025. 9h08min.",
+        "information": "Sobre lógica; Extensões que utilizo no VSCode; Operadores de comparação; Operadores Lógicos; Avaliação de Curto-Circuito (Short-Circuit); if, else if e else; Modelo HTML e CSS; Operação ternária; Objeto Date; Switch/Case; Exercício com switch e date; Mais diferenças entre var e let/const; Atribuição via desestruturação (Objetos); For - Clássico - Estrutura de repetição; DOM e a árvore do DOM; For in - Estrutura de repetição; For of - Estrutura de repetição; Exercícios com NodeList (Browser); While e Do While - Estrutura de repetição; Break e Continue; Tratando e lançando erros (try, catch, throw); Tratando e lançando erros (try, catch, finally); setInterval e setTimeout."
+    }
+];
+
+const todosOsCursos = document.getElementById("accordion");
+
+cursosJSON.forEach(curso => {
+    const boxCourse = document.createElement("div");
+    boxCourse.innerHTML = `
+        <div class="accordion__item">
+            <button class="accordion__header">
+                <span>${curso.titleCourse}</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="accordion__body">
+                <p>
+                    ${curso.localDate}
+                </p>
+                <p>
+                    ${curso.information}
+                </p>
+            </div>
+        </div>
+    `;
+    todosOsCursos.appendChild(boxCourse);
+});
+
+/* Codificando */
+
 const toggleTheme = document.getElementById('toggleTheme');
 const rootHtml = document.documentElement // assistir os documentos da página como um todo
 
@@ -54,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', newTheme);
   });
 });
+
+
 
 
 /* 
