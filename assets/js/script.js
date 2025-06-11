@@ -38,18 +38,29 @@ cursosJSON.forEach(curso => {
 });
 
 /* Codificando */
-
+let themePort;
 const toggleTheme = document.getElementById('toggleTheme');
 const rootHtml = document.documentElement // assistir os documentos da página como um todo
 
+// Ao carregar a página vai recuperar o tema escolhido
+window.addEventListener('DOMContentLoaded', () => {
+    const themeSaved = localStorage.getItem('themePort');
+
+    if(themeSaved) {
+        rootHtml.setAttribute('data-theme', themeSaved); //recuperando no localStorage, quando carregar a página
+    };
+});
+
 function changeTheme () {
     const currentTheme = rootHtml.getAttribute('data-theme');
-    
-/*     if (currentTheme === 'dark') rootHtml.setAttribute('data-theme', 'light');
-    else rootHtml.setAttribute('data-theme', 'dark'); */
 
-    /* usando if ternário */
-    currentTheme === 'dark' ? rootHtml.setAttribute('data-theme', 'light') : rootHtml.setAttribute('data-theme', 'dark');
+    if(currentTheme === 'dark') { 
+        rootHtml.setAttribute('data-theme', 'light');
+        localStorage.setItem('themePort', 'light'); //atribuindo no localStorage
+    } else {
+        rootHtml.setAttribute('data-theme', 'dark');
+        localStorage.setItem('themePort', 'dark');
+    }
 
     toggleTheme.classList.toggle('bi-sun'); /* se tem tira e se não tem coloca */
     toggleTheme.classList.toggle('bi-moon-stars'); /* se tem tira e se não tem coloca */
@@ -76,27 +87,6 @@ menuLinks.forEach(item => {
         item.classList.add('active');
     })
 })
-
-/* Salvando no localStorage a opção de theme escolhida pelo usuário */
-document.addEventListener('DOMContentLoaded', () => {
-  const html = document.documentElement;
-  const savedTheme = localStorage.getItem('theme');
-
-  // Aplica o tema salvo (ou mantém o padrão)
-  if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
-  }
-
-  document.getElementById('toggle-theme').addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-});
-
-
 
 
 /* 
