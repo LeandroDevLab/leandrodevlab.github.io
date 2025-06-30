@@ -124,7 +124,7 @@ arrayProjetos.forEach(projeto => {
                 </ul>
                 <div class="card__buttons">
                   <a
-                    href="https://leandrodevlab.github.io/portifolio/"
+                    href="${projeto.previa}"
                     target="_blank"
                   >
                     <button class="btn btn--primary">
@@ -133,7 +133,7 @@ arrayProjetos.forEach(projeto => {
                     </button>
                   </a>
                   <a
-                    href="https://github.com/LeandroDevLab/portifolio"
+                    href="${projeto.repositorio}"
                     target="_blank"
                   >
                     <button class="btn">
