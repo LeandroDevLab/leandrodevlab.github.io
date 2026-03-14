@@ -1,5 +1,16 @@
 const arrayProjetos = [
   {
+    urlMiniatura: './assets/image/projects/conversor-moeda.png',
+    titulo: 'Conversor de Moedas',
+    subtitle: 'Conversor de Moedas é uma aplicação web que permite converter valores em Reais (BRL) para Dólar Americano (USD), Euro (EUR) e Bitcoin (BTC).',
+    tec1: 'Consumo de dados reais através de API',
+    tec2: 'Uso de conversão para moeda;',
+    tec3: 'Validação',
+    previa: 'https://leandrodevlab.github.io/conversor-de-moedas/',
+    repositorio: 'https://github.com/LeandroDevLab/conversor-de-moedas',
+    cardReverse: '',
+  },
+  {
     urlMiniatura: './assets/image/projects/mortgage.png',
     titulo: 'Calculadora de Hipoteca',
     subtitle: 'Projeto de calculadora de hipoteca com validação de formulário',
